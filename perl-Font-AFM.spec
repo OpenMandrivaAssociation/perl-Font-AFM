@@ -1,9 +1,10 @@
 
+%define rel 4
 %define realname	Font-AFM
 
 Name:		perl-%{realname}
 Version:	1.19
-Release:	%mkrel 3
+Release:	%mkrel %rel
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    	Interface to Adobe Font Metrics files
