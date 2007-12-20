@@ -10,6 +10,7 @@ Group:		Development/Perl
 Summary:    	Interface to Adobe Font Metrics files
 Source0:   http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{realname}-%{version}.tar.bz2 
 Url:		http://www.cpan.org
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
 BuildArch:      noarch
 %description
