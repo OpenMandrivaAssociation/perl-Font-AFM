@@ -1,5 +1,5 @@
 
-%define rel 4
+%define rel 5
 %define realname	Font-AFM
 
 Name:		perl-%{realname}
