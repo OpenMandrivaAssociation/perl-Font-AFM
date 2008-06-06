@@ -1,9 +1,9 @@
 
-%define rel 5
+%define rel 1
 %define realname	Font-AFM
 
 Name:		perl-%{realname}
-Version:	1.19
+Version:	1.20
 Release:	%mkrel %rel
 License:	GPL or Artistic
 Group:		Development/Perl
