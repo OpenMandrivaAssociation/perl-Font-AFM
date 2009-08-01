@@ -1,18 +1,19 @@
+%define upstream_name	 Font-AFM
+%define upstream_version 1.20
 
-%define rel 1
-%define realname	Font-AFM
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:		perl-%{realname}
-Version:	1.20
-Release:	%mkrel %rel
-License:	GPL or Artistic
-Group:		Development/Perl
 Summary:    	Interface to Adobe Font Metrics files
-Source0:   http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{realname}-%{version}.tar.bz2 
+License:	GPL+ or Artistic
+Group:		Development/Perl
 Url:		http://www.cpan.org
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
-BuildArch:      noarch
+Source0:   http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{upstream_name}-%{upstream_version}.tar.bz2 
+
+BuildArch:  noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 %description
 This module implements the Font::AFM class. Objects of this
 class are initialised from an AFM-file and allows you to obtain
@@ -20,7 +21,7 @@ information about the font and the metrics of the various glyphs
 in the font.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
